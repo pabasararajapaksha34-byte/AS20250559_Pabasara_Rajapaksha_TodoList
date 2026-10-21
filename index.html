@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="main-header">
+    <h6>My To-Do List</h6>
+</header>
+
+    <div class="container">
+
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your tasks and stay productive.</p>
+        </header>
+
+        <div class="input-area">
+            <input type="text" id="taskInput"
+                   placeholder="Enter a new task...">
+
+            <button id="addBtn" onclick="addTask()">
+                Add Task
+            </button>
+        </div>
+
+        <div class="task-heading">
+            <span>Your tasks</span>
+            <span class="remaining" id="remaining">0 remaining</span>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all"
+                    onclick="filterTasks('all')">All</button>
+
+            <button class="filter-btn" data-filter="active"
+                    onclick="filterTasks('active')">Active</button>
+
+            <button class="filter-btn" data-filter="completed"
+                    onclick="filterTasks('completed')">Completed</button>
+        </div>
+
+        <p id="message"></p>
+
+        <div id="taskList"></div>
+
+        <div class="footer">
+            <button id="clearBtn" onclick="clearCompleted()">
+                Clear Completed
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
